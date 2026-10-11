@@ -121,7 +121,7 @@ void destroy_controls() {
 
 int main(int argc, char **argv) {
   char *prog_name;
-  int ret;
+  int ret = EXIT_FAILURE;
   
   if(argc < 2 || !strncmp(argv[1], "-h", 3) || !strncmp(argv[1], "--help", 7) ) {
     prog_name = strrchr(argv[0], '/');

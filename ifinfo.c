@@ -52,7 +52,6 @@ int get_ifinfo(char *ifname) {
   
   memset(&ifr, 0, sizeof(struct ifreq));
   strncpy(ifr.ifr_name, ifname, IFNAMSIZ-1);
-  ifr.ifr_name[IFNAMSIZ] = '\0';
   
   if (ioctl(fd, SIOCGIFHWADDR, &ifr) == -1) {
     print( WARNING, "ioctl: %s", strerror(errno));
