@@ -42,7 +42,7 @@ struct host {
 
 extern struct hosts_data {
   struct host **array;
-  uint32_t size;
+  long size; /* Same width as array.size; keeps mutex outside the count. */
   data_control control;
 } hosts;
 
